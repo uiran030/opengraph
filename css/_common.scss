@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Freestyle Script';
+    src: url('font/FreestyleScript-Regular.woff2') format('woff2'),
+        url('font/FreestyleScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html,body{margin:0;}
+h1,h2,h3,h4,h5,h6,p,figure{margin:0;}
+ul,li{
+    list-style-type:none;
+    padding:0; margin:0;
+}
+a{
+    color:#333; 
+    text-decoration: none;
+}
+img{vertical-align: middle;}
+table{border-collapse: collapse;}
+*{box-sizing: border-box;}
+
+
+@import '_media';
+$point-color: #fed136;
+$content-width:70%;
+$title:54px;
+$p100:100px 0;
+// 중괄호로 묶지않아서 언제든 쓸 수있는 값임.
+
+@include media($mobile,$tablet-w){
+    $point-color: #fed136;
+    $content-width:70%;
+    $title:34px;
+    $p100:30px 0;
+}
+// 중괄호의 영역안에 있어서 값을 수정해도 바깥 내용이 수정되는게아니라
+// 중괄호 안에 값이 수정되는 것임. (그러므로 !global이라는 요소를 꼭 넣어줘야함)
+@mixin h2 {
+    h2{
+        font-size: $title;
+        font-family: 'Freestyle Script';
+    }
+    >p{margin:1% 0 5%;}
+}
+
+@mixin flex($just,$items,$dir,$wrap){
+    display: flex;
+    justify-content: $just;
+    align-items: $items;
+    flex-direction: $dir;
+    flex-wrap:$wrap;
+}
+@mixin  btn {
+    display:inline-block;
+    padding:15px 30px;
+    color:#fff;
+    background: $point-color;
+}
+
+// header
+header{
+    position:fixed;
+    left:0; top:0;
+    width:100%;
+    padding:2% 0;
+
+    >div{
+        width:$content-width; margin:0 auto;
+        // display:flex;
+        // justify-content: space-between;
+        // align-items: center;
+        @include flex(space-between,center,row,nowrap);
+
+        h1{
+            a{
+                font-size:0;
+                width:93px; height:36px;
+                background: url('../img/logo.png') no-repeat;
+                display:block;
+            }
+        }
+        nav{
+            a{
+                color:#fff; padding:0 24px;
+                display:inline-block;
+            }
+        }
+    }
+}
+
+// footer
+footer{
+    padding:3% 0%;
+    text-align: center;
+}
+

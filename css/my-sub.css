@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Freestyle Script";
+  src: url("font/FreestyleScript-Regular.woff2") format("woff2"), url("font/FreestyleScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html, body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2% 0;
+}
+header > div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header > div h1 a {
+  font-size: 0;
+  width: 93px;
+  height: 36px;
+  background: url("../img/logo.png") no-repeat;
+  display: block;
+}
+header > div nav a {
+  color: #fff;
+  padding: 0 24px;
+  display: inline-block;
+}
+
+footer {
+  padding: 3% 0%;
+  text-align: center;
+}
+
+.visual > img {
+  width: 100%;
+}
+
+.ti {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.ti h2 {
+  font-size: 54px;
+  margin-top: 2%;
+}
+.ti small {
+  display: block;
+  margin-bottom: 5%;
+}
+.ti ul {
+  margin: 0;
+  width: 80%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ti ul li {
+  width: 25vh;
+}
+.ti ul li > img {
+  border: 3px solid yellow;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ti ul:nth-of-type(1) {
+  margin-left: 0;
+}/*# sourceMappingURL=my-sub.css.map */

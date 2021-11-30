@@ -1,0 +1,158 @@
+@import '_common.scss';
+
+
+@mixin flex($just,$items,$dir,$wrap){
+    display: flex;
+    justify-content: $just;
+    align-items: $items;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+// 현재 적혀있는 값이 기본값임. (flex-start, flex-start, row, nowrap)
+
+@mixin btn {
+    display: inline-block;
+    padding:15px 30px;
+    color:white;
+    background: $point-color;  
+}
+
+$content-width : 70%;
+$point-color: yellow;
+$title : 54px;
+
+
+
+
+main{}
+.visual{
+    width:100%;
+    height:100vh;
+    // overflow: hidden;
+    >img{
+        // width:100%;
+        object-fit: cover;
+    }
+    >div{
+        position:absolute;
+        left:50%; top:50%;
+        transform: translate(-50%,-50%);
+        color:white;
+        text-align: center;
+        h2{
+            font-size: 4rem;
+            white-space: pre-line;
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transform: translateY(100%);
+            opacity: 0;
+            
+            animation: spot-text .3s forwards;
+            small{
+                display: block;
+                font-size: 2rem;
+                font-weight: normal;
+                text-transform: lowercase;
+            }
+        }
+        a{
+            @include btn;
+            transform: translateY(100%);
+            opacity: 0;
+            animation: spot-text .3s forwards;
+        }
+        @keyframes spot-text {
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+        }
+    }
+}
+
+.work{
+    background-color: #eee;
+    padding:$p100;
+    text-align: center;
+
+    @include h2;
+    ul{
+        width:$content-width;
+        margin:0 auto;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        @include flex(space-between,0,0,wrap);
+        li{
+            width:32%;
+            margin-bottom: 2%;
+            p{}
+            p > img{width:100%;}
+            p > small{
+                display: block;
+                font-weight: normal;
+            }
+            p:nth-of-type(2){
+                background: white;
+                padding:10%;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.banner{
+    text-align: center;
+    padding:$p100;
+    a{
+        font-size: 0;
+        display: inline-block;
+        width:200px;
+        height:60px; 
+        margin:0 2%;
+        
+    }
+
+    // each 사용법은 외우는게 좋아서 계속 보고 외우면 됨.
+    $bn : (
+        1:'../img/bn_01.jpg', 2:'../img/bn_02.jpg',
+        3:'../img/bn_03.jpg', 4:'../img/bn_04.jpg');
+    @each $key, $value in $bn{
+        a:nth-of-type(#{$key}){
+            background: url(#{$value}) 0 0 / 100% no-repeat;
+        }
+    }
+}
+
+.contact{
+    padding:$p100 0;
+    background: #222;
+    text-align: center;
+    h2{
+        font-size: $title;
+        color:white;
+    }
+    div{
+        margin-top:2%;
+        input{
+            width:20%;
+            padding:18px;
+            vertical-align: middle;
+            border:none;
+            outline: none;
+
+            // &::placeholder{color:red;} (컬러 변경 가능)
+        }
+        a{
+            vertical-align: middle;
+            @include btn;
+        }
+    }
+}
+
+footer{
+    padding:3% 0;
+    text-align:center;
+}

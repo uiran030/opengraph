@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "Freestyle Script";
+  src: url("font/FreestyleScript-Regular.woff2") format("woff2"), url("font/FreestyleScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html, body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2% 0;
+}
+header > div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header > div h1 a {
+  font-size: 0;
+  width: 93px;
+  height: 36px;
+  background: url("../img/logo.png") no-repeat;
+  display: block;
+}
+header > div nav a {
+  color: #fff;
+  padding: 0 24px;
+  display: inline-block;
+}
+
+footer {
+  padding: 3% 0%;
+  text-align: center;
+}
+
+.visual > img {
+  width: 100%;
+}
+
+.service {
+  padding: 100px 0;
+  text-align: center;
+}
+.service h2 {
+  font-size: 54px;
+  font-family: "Freestyle Script";
+}
+.service > p {
+  margin: 1% 0 5%;
+}
+.service ul {
+  width: 70%;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.service ul li {
+  width: 30%;
+}
+.service ul li::before {
+  content: "";
+  width: 53px;
+  height: 53px;
+  display: block;
+  margin: 5% auto;
+}
+.service ul li:nth-child(1)::before {
+  background: url("../../sub-img/ic_01.png") no-repeat;
+}
+.service ul li:nth-child(2)::before {
+  background: url("../../sub-img/ic_02.png") no-repeat;
+}
+.service ul li:nth-child(3)::before {
+  background: url("../../sub-img/ic_03.png") no-repeat;
+}
+.service ul li b {
+  font-weight: bold;
+}
+.service ul li p {
+  color: #555;
+  line-height: 1.6;
+  margin-top: 2%;
+}
+
+.about {
+  padding: 100px 0;
+  background: #f2f2f1;
+}
+.about .profile {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.about .profile .left {
+  width: 40%;
+}
+.about .profile .right {
+  width: 50%;
+}
+.about .profile .right h2 {
+  font-size: 54px;
+  font-family: "Freestyle Script";
+}
+.about .profile .right > p {
+  margin: 1% 0 5%;
+}
+.about .profile .right ul li {
+  margin-bottom: 20px;
+}
+.about .profile .right ul li > p {
+  background: #ddd;
+}
+.about .profile .right ul li > p > span {
+  background: #fed136;
+  color: #fff;
+  text-align: right;
+  padding: 1%;
+  display: block;
+}
+.about .profile .right ul li:nth-of-type(1) > p > span {
+  width: 90%;
+}
+.about .profile .right ul li:nth-of-type(2) > p > span {
+  width: 80%;
+}
+.about .profile .right ul li:nth-of-type(3) > p > span {
+  width: 90%;
+}
+.about .profile .right ul li:nth-of-type(4) > p > span {
+  width: 70%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .visual > img {
+    width: 100%;
+  }
+
+  .service {
+    padding: 40px 0;
+    text-align: center;
+  }
+  .service h2 {
+    font-size: 34px;
+    font-family: "Freestyle Script";
+  }
+  .service > p {
+    margin: 1% 0 5%;
+  }
+  .service ul {
+    width: 70%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .service ul li {
+    width: 100%;
+  }
+  .service ul li::before {
+    content: "";
+    width: 53px;
+    height: 53px;
+    display: block;
+    margin: 5% auto;
+  }
+  .service ul li:nth-child(1)::before {
+    background: url("../../sub-img/ic_01.png") no-repeat;
+  }
+  .service ul li:nth-child(2)::before {
+    background: url("../../sub-img/ic_02.png") no-repeat;
+  }
+  .service ul li:nth-child(3)::before {
+    background: url("../../sub-img/ic_03.png") no-repeat;
+  }
+  .service ul li b {
+    font-weight: bold;
+  }
+  .service ul li p {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 2%;
+  }
+
+  .about {
+    padding: 40px 0;
+    background: #f2f2f1;
+  }
+  .about .profile {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about .profile .left {
+    width: 100%;
+  }
+  .about .profile .left > img {
+    width: 100%;
+  }
+  .about .profile .right {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .about .profile .right h2 {
+    font-size: 34px;
+    font-family: "Freestyle Script";
+  }
+  .about .profile .right > p {
+    margin: 1% 0 5%;
+  }
+  .about .profile .right ul li {
+    margin-bottom: 20px;
+  }
+  .about .profile .right ul li > p {
+    background: #ddd;
+  }
+  .about .profile .right ul li > p > span {
+    background: #fed136;
+    color: #fff;
+    text-align: right;
+    padding: 1%;
+    display: block;
+  }
+  .about .profile .right ul li:nth-of-type(1) > p > span {
+    width: 90%;
+  }
+  .about .profile .right ul li:nth-of-type(2) > p > span {
+    width: 80%;
+  }
+  .about .profile .right ul li:nth-of-type(3) > p > span {
+    width: 90%;
+  }
+  .about .profile .right ul li:nth-of-type(4) > p > span {
+    width: 70%;
+  }
+}
+.contact {
+  padding: 5% 0;
+  background: #222;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 34px;
+  color: white;
+}
+.contact div {
+  margin-top: 2%;
+}
+.contact div input {
+  width: 20%;
+  padding: 18px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+.contact div a {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fff;
+  background: #fed136;
+}/*# sourceMappingURL=sub.css.map */

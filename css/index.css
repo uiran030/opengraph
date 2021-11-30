@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Freestyle Script";
+  src: url("font/FreestyleScript-Regular.woff2") format("woff2"), url("font/FreestyleScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html, body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2% 0;
+}
+header > div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+header > div h1 a {
+  font-size: 0;
+  width: 93px;
+  height: 36px;
+  background: url("../img/logo.png") no-repeat;
+  display: block;
+}
+header > div nav a {
+  color: #fff;
+  padding: 0 24px;
+  display: inline-block;
+}
+
+footer {
+  padding: 3% 0%;
+  text-align: center;
+}
+
+.visual {
+  width: 100%;
+  height: 100vh;
+}
+.visual > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.visual > div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.visual > div h2 {
+  font-size: 4rem;
+  white-space: pre-line;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateY(100%);
+  opacity: 0;
+  -webkit-animation: spot-text 0.3s forwards;
+          animation: spot-text 0.3s forwards;
+}
+.visual > div h2 small {
+  display: block;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+.visual > div a {
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  background: yellow;
+  transform: translateY(100%);
+  opacity: 0;
+  -webkit-animation: spot-text 0.3s forwards;
+          animation: spot-text 0.3s forwards;
+}
+@-webkit-keyframes spot-text {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spot-text {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.work {
+  background-color: #eee;
+  padding: 100px 0;
+  text-align: center;
+}
+.work h2 {
+  font-size: 54px;
+  font-family: "Freestyle Script";
+}
+.work > p {
+  margin: 1% 0 5%;
+}
+.work ul {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: 0;
+  flex-direction: 0;
+  flex-wrap: wrap;
+}
+.work ul li {
+  width: 32%;
+  margin-bottom: 2%;
+}
+.work ul li p > img {
+  width: 100%;
+}
+.work ul li p > small {
+  display: block;
+  font-weight: normal;
+}
+.work ul li p:nth-of-type(2) {
+  background: white;
+  padding: 10%;
+  font-weight: bold;
+}
+
+.banner {
+  text-align: center;
+  padding: 100px 0;
+}
+.banner a {
+  font-size: 0;
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  margin: 0 2%;
+}
+.banner a:nth-of-type(1) {
+  background: url(../img/bn_01.jpg) 0 0/100% no-repeat;
+}
+.banner a:nth-of-type(2) {
+  background: url(../img/bn_02.jpg) 0 0/100% no-repeat;
+}
+.banner a:nth-of-type(3) {
+  background: url(../img/bn_03.jpg) 0 0/100% no-repeat;
+}
+.banner a:nth-of-type(4) {
+  background: url(../img/bn_04.jpg) 0 0/100% no-repeat;
+}
+
+.contact {
+  padding: 100px 0 0;
+  background: #222;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 54px;
+  color: white;
+}
+.contact div {
+  margin-top: 2%;
+}
+.contact div input {
+  width: 20%;
+  padding: 18px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+.contact div a {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  background: yellow;
+}
+
+footer {
+  padding: 3% 0;
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
